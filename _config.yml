@@ -6,9 +6,9 @@ paginate: 8
 safe: false
 
 #站点基础配置
-title: Violet
-subTitle: Just another Jekyll blog.
-description: 这是 PIZn 的又一个博客，它是基于 Jekyll 搭建起来的。在这里，不仅仅是用来快速记录工作，学习，生活的一点一滴的地方，更是 PIZn 对 Jekyll 的学习和使用的一次有意义的实践。
+title: Vincent
+subTitle: "acs1899's blog"
+description: Vincent, acs1899, GitHub, Jekyll, Works, css, html, javascript。
 feed: /atom.xml
 
 #菜单配置
@@ -19,10 +19,8 @@ nav:
     url: /archives.html
   - text: 作品
     url: /works.html
-  - text: 联系我
-    url: http://www.zhanxin.info/contact.html
-  - text: 博客源代码
-    url: https://github.com/pizn/pizn.github.com
+  - text: about
+    url: /contact.html
 
 #theme config
 themes: /themes/violet
@@ -37,21 +35,17 @@ headimg:
 #关注我
 follow:
   - class: fa-google-plus
-    url: http://www.zhanxin.info
+    url: https://plus.google.com/111953488722726761148/posts
   - class: fa-facebook
-    url: http://www.zhanxin.info
+    url: https://www.facebook.com/wenqi.luo.12
   - class: fa-github
-    url: http://github.com/pizn
+    url: https://github.com/acs1899
   - class: fa-weibo
-    url: http://weibo.com/pizner
-  - class: fa-renren
-    url: http://www.zhanxin.info
-  - class: fa-pinterest
-    url: http://www.zhanxin.info
+    url: http://weibo.com/u/1308465790
   - class: fa-twitter
-    url: http://www.zhanxin.info
+    url: https://twitter.com/Mashell81326713
   - class: fa-rss
-    url: http://www.zhanxin.info
+    url: /atom.xml
 
 #作者信息
 author:
