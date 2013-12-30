@@ -15,6 +15,8 @@ feed: /atom.xml
 nav:
   - text: 首页
     url: /index.html
+  - text: 文章分类
+    url: '###'
   - text: 文章归档
     url: /archives.html
   - text: 作品

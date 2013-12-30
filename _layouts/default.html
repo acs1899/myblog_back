@@ -23,6 +23,7 @@
     <meta name="keywords" content="{{ page.keywords | join: ',' }}" />
     <!-- //页面样式 -->
     <link rel="stylesheet" href="{{ site.url }}{{ site.themes }}/css/style.css" type="text/css" />
+    <link rel="stylesheet" href="{{ site.url }}/css/syntax.css" type="text/css" />
     <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="{{ site.feed }}" />
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Spirax' rel='stylesheet' type='text/css'>
@@ -43,7 +44,11 @@
                     {% if page.url == link.url%}
                       {% assign active = 'nav-item-active' %}
                     {% endif %}
-                    <li class="nav-item {{ active }}">
+		    {%assign iscategory = nil %}
+		    {% if link.url=='###' %}
+		      {%assign iscategory = 'category' %}
+		    {% endif %}
+                    <li class="nav-item {{ active }} {{ iscategory }}">
                         <a href="{{ link.url }}">
                             {{ link.text }}
                         </a>
@@ -53,6 +58,13 @@
                 </ul>
             </div>
         </div>
+	<div class="category_box">
+	    <ul>
+	       {% for category in site.categories %}
+	           <li class="cagory-li "><a href="/{{ category | first }}">{{ category | first }}</a></li>
+	       {% endfor %}
+	    </ul>
+	</div>
         <div class="main" id="violet-main">
             {{ content }}
         </div>
@@ -74,6 +86,11 @@
     <script type="text/javascript" src="{{ site.url }}{{ site.themes }}/js/jquery-1.8.3.js"></script>
     <script type="text/javascript" src="{{ site.url }}{{ site.themes }}/js/jquery-scrollTo.js"></script>
     <script type="text/javascript" src="{{ site.url }}{{ site.themes }}/js/common.js"></script>
+    <script type="text/javascript">
+	$(function(){
+	    var cate=$('.category')
+	});
+    </script>
     <script type="text/javascript">
         var headImgArr = [];
         {% for imgsrc in site.headimg %}
