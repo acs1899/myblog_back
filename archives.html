@@ -5,30 +5,65 @@ description: acs1899's blog。
 keywords: acs1899, GitHub, Archives, css, html, javascript, violet, Jekyll
 isArchive: true
 ---
-<div class="main-article main-article-page">
+<!--<div class="main-article main-article-page">
     <div class="violet-title">
         <h3 class="violet-title-item">All posts is here.<span>({{ site.posts | size }} posts.)</span></h3>
     </div>
     <div class="violet-post">
         <div class="main-article-contant">
-
             {% capture post_year1 %}{{ 'now' | date: '%Y' }}{% endcapture %}
+            {% for post in site.posts %}
+                {% capture post_year2 %}{{ post.date | date: '%Y' }}{% endcapture %}
+                {% if post_year1 != post_year2 %}
+                    {% assign post_year1 = post_year2 %}
+		{% endif %}
             <h3>{{ post_year1 }}</h3>
             <ul class="article-year fn-clear">
-                {% for post in site.posts %}
-                    {% capture post_year2 %}{{ post.date | date: '%Y' }}{% endcapture %}
-                    {% if post_year1 != post_year2 %}
-                        {% assign post_year1 = post_year2 %}
-            </ul>
-            <h3>{{ post_year1 }}</h3>
-            <ul class="article-year fn-clear">
-                    {% endif %}
                 <li>
                     <span>{{ post.date | date_to_utc | date: '%Y-%m-%d' }}</span>
                     <a href="{{site.url}}{{ post.url }}">{{ post.title }}</a>
+		    <p class="description">{{ post.description }}</p>
                 </li>
-                {% endfor %}
             </ul>
+	    {% endfor %}
         </div>
     </div>
+</div>-->
+<div class="violet-title"></div>
+<div style="height:600px">
+<div class="timeline" id="timeline-embed" style="height:600px"></div>
 </div>
+<script type="text/javascript">
+      	var jsons={
+		    "timeline":
+		    {
+		        "headline":"All ports in there",
+			"startDate":"2010",
+		        "type":"default",
+		        "text":"<p>You can find all ports</p>",
+		        "asset": {
+		            "credit":"Credit Name Goes Here",
+		            "caption":"Caption text goes here"
+		        },
+		        "date": []
+		    }
+		}
+	{% for post in site.posts %}
+	jsons.timeline.date.push({
+	    'startDate':'{{ post.date | date_to_utc | date: "%Y-%m-%d" }}'.split('-').join(','),
+	    'headline':'{{ post.title }}',
+	    'text':'<p>{{ post.description }}</p>',
+	    'asset':{
+		{% if post.figure %}
+		    'media':'{{post.figure}}'
+		{% endif  %}
+	    }
+	});
+	{% endfor %}
+        var timeline_config = {
+         width: "100%",
+         height: "100%",
+         source: jsons
+        }
+</script>
+<script type="text/javascript" src="js/storyjs-embed.js"></script>

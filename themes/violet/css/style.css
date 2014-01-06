@@ -193,7 +193,9 @@ a:hover {
     line-height: 32px;
     padding: 0 20px;
     border-radius: 3px 3px;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgb(0, 0, 0);
+    filter:alpha(opacity=80);
+    opacity:0.8;
     color: #fff;
     font-size: 14px;
     -webkit-transition: background .4s ease-in-out;
@@ -204,7 +206,8 @@ a:hover {
 }
 .nav-item a:hover,
 .nav-item-active a {
-    background: rgba(0,0,0,0.8);
+    filter:alpha(opacity=100);
+    opacity:1;
     text-decoration: none;
 }
 
@@ -409,7 +412,7 @@ a:hover {
 .violet-title {
     padding: 30px 0;
     width: 100%;
-    background: #f6f6f6;
+    background: #e3e3e3;
 }
 .violet-title .violet-title-item {
     width: 720px;
@@ -510,6 +513,7 @@ a:hover {
     padding: 10px 20px;
     list-style-type: none;
     background: #f6f6f6;
+    overflow:hidden;
 }
 .main-article .article-year li span {
     display: block;
@@ -557,4 +561,9 @@ a.toTop:hover {
     line-height: 40px;
     vertical-align: top;
 }
-
+.category_box{background: #22272a;display:none}
+.category_box ul{width:720px;margin:0 auto;overflow:hidden;padding:8px 0}
+.category_box ul li{float:left;margin-right:16px;}
+.category_box ul li a{font-size:1.2em;-webkit-transition: all .4s ease-in-out;color:#fff}
+.category_box ul li a:hover{color:#0088cc;text-decoration:none;}
+.main-article-contant .description{color:#6D6D6D;margin-top:10px;}

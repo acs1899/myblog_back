@@ -44,10 +44,10 @@
                     {% if page.url == link.url%}
                       {% assign active = 'nav-item-active' %}
                     {% endif %}
-		    {%assign iscategory = nil %}
-		    {% if link.url=='###' %}
-		      {%assign iscategory = 'category' %}
-		    {% endif %}
+		    {% assign iscategory = nil %}
+		    {% if link.text == '文章分类'%}
+                      {% assign iscategory = 'category' %}
+                    {% endif %}
                     <li class="nav-item {{ active }} {{ iscategory }}">
                         <a href="{{ link.url }}">
                             {{ link.text }}
@@ -59,12 +59,12 @@
             </div>
         </div>
 	<div class="category_box">
-	    <ul>
-	       {% for category in site.categories %}
-	           <li class="cagory-li "><a href="/{{ category | first }}">{{ category | first }}</a></li>
-	       {% endfor %}
-	    </ul>
-	</div>
+            <ul>
+            {% for category in site.categories %}
+            <li class="cagory-li "><a href="/categories/{{ category | first }}">{{ category | first }} ({{ category | last | size }})</a></li>
+            {% endfor %}
+            </ul>
+    	</div>
         <div class="main" id="violet-main">
             {{ content }}
         </div>
@@ -88,7 +88,15 @@
     <script type="text/javascript" src="{{ site.url }}{{ site.themes }}/js/common.js"></script>
     <script type="text/javascript">
 	$(function(){
-	    var cate=$('.category')
+	    var cate=$('.category'),cb=$('.category_box'),p=$('.main-article-contant .description');
+	    cate.bind('click',function(){
+		cb.slideToggle();
+	    });
+	    p.each(function(){
+		if(this.innerHTML.length>40){
+		    this.innerHTML=this.innerHTML.slice(0,40)+'...';
+		}
+	    });
 	});
     </script>
     <script type="text/javascript">
