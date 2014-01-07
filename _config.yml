@@ -57,8 +57,8 @@ author:
 #评论信息
 disqus:
   config: true
-  id: piznblog
+  id: acs1899blog
 
 duoshuo:
   config: false
-  id: zhanxin
+  id: acs1899blog

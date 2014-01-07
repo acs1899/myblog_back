@@ -7,4 +7,3 @@ categories: [javascript, html&css, jekyll]
 ---
 
 Hello world!
-asdasd
