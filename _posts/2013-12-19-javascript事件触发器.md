@@ -1,6 +1,6 @@
 ---
 layout: post
-title: javascript事件触发器fireEvent和dispatchEvent
+title: javascript事件触发器
 description: 事件触发器就是用来触发某个元素下的某个事件，IE下fireEvent方法，高级浏览器（chrome,firefox等）有dispatchEvent方法
 keywords: fireEvent,dispatchEvent,IE
 categories: javascript

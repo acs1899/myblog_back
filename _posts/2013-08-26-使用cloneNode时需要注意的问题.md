@@ -5,7 +5,7 @@ description: 当被clone的元素包涵script子元素时，script中的脚本�
 keywords: cloneNode,event
 categories: javascript
 ---
-oneNode()是DOM中Node对象的方法，使用cloneNode可以方便的复制DOM节点。cloneNode()接收一个参数<span class="impo">include_all</span>。<span class="impo">include_all</span>为一个布尔值，true表示被clone的节点的所有子节点也会被clone（既深度clone），false(默认)只会clone原节点。
+oneNode()是DOM中Node对象的方法，使用cloneNode可以方便的复制DOM节点。cloneNode()接收一个参数<span class="impo">include\_all</span>。<span class="impo">include\_all</span>为一个布尔值，true表示被clone的节点的所有子节点也会被clone（既深度clone），false(默认)只会clone原节点。
 
 1、当被clone的节点包含script标签时，clone后script标签是否会再次被执行
 

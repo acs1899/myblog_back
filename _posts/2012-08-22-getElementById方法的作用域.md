@@ -17,11 +17,14 @@ var b=$('header');
 在chrome、firefox、IE9下运行时，会抛出错误：
 
 <span class="impo">Illegal invocation</span> chrome
+
 <span class="impo">'getElementById' called on an object that does not implement interface Document.</span> firefox
 
 再到IE6~8下，却能够顺畅运行。
 
-<span class="impo">Illegal invocation</span>意为非法调用，<span class="impo">'getElementById' called on an object that does not implement interface Document.</span>意为'"getElementById"被一个不能实现document接口的对象调用'（乱翻译的，不过大致意思应该是这样。。。）
+<span class="impo">Illegal invocation</span>意为非法调用
+
+<span class="impo">'getElementById' called on an object that does not implement interface Document.</span>意为'"getElementById"被一个不能实现document接口的对象调用'（乱翻译的，不过大致意思应该是这样。。。）
 
 说明肯能是作用域的问题
 {% highlight javascript linenos %}
