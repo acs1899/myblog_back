@@ -1,0 +1,39 @@
+---
+layout: post
+title: 2012.06.01近期项目总结
+description: 总结最近项目中所遇到的问题
+keywords: 总结,问题
+categories: [html&css, javascript]
+---
+
+<p>表单控件在IE6下始终处于Z-INDEX最高，需要用一个空白<span class="impo">iframe</span>将其覆盖。</p>
+
+<p>IE的盒模型宽（高）度 = width(height)</p>
+
+<p>w3c标准盒模型宽（高）度 = width(height) + padding</p>
+
+<p>IE中AJAX 如果用get方式发送请求 URL后跟的值必须经过<span class="impo">encodeURIComponent</span>转码，否则在IE下可能导致AJAX无效(理论上只要是通过GET方式传送的数据都应该使用<span class="impo">encodeURIComponent</span>)。</p>
+
+<p>要取<span class="impo">textarea</span>中的值 若使用<span class="impo">innerHTML</span>只能取到初始值。当textarea中的值改变之后用<span class="impo">innerHTML</span>就取不到现在的值，需要用value。</p>
+
+<p>当文件使用 utf-8+BOM 编码时，文件开头会自带一个空白符。这会导致<span class="impo">DOCTYPE</span>申明无法被解析，需要将文件保存为 utf-8 无BOM编码。</p>
+
+<p>在IE6下 a 标签设置 href="javascript:void(0)" <span class="impo">onclick</span> 事件将不能触发。有两种解决方法：</p>
+    
+<p>  &lt;a style="cursor:pointer" onclick="alert('d')">&lt;/a> 直接不设置href</p>
+    
+<p>  &lt;a href="javascript:void(0)" onclick="alert('d');return false">&lt;/a> 通过return false阻止触发a标签的默认事件</p>
+
+<p>IE下操作粘贴板：</p>
+    
+<p>  获取粘贴板内容 window.clipboardData.getData("Text")</p>
+    
+<p>  设置粘贴板内容 window.clipboardData.setData("Text",要复制的内容)</p>
+
+<p>判断IE6最简短的代码</p>
+    
+<p>  !-[1,]&&!window.XMLHttpRequest</p>
+    
+<p>  !-[1,]利用了IE与标准浏览器在处理数组的toString方法的差异来判断是否为IE浏览器（PS：只能判断IE6，7，8），!window.XMLHttpRequest则排出掉IE7及以上版本。</p>
+
+<p>水平<span class="impo">margin</span>不重叠，浮动元素上下<span class="impo">margin</span>不重叠，常规折行上下<span class="impo">margin</span>重叠。</p>
