@@ -12,7 +12,7 @@ categories: javascript
 var $=document.getElementById;
 var b=$('header');
 {% endhighlight %}
-秉着'秉着实践出真理'的原则，自己敲一敲代码跑了一下。
+秉着'实践出真理'的原则，自己敲一敲代码跑了一下。
 
 在chrome、firefox、IE9下运行时，会抛出错误：
 

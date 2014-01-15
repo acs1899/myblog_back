@@ -33,9 +33,9 @@ document.getElementById("test").onclick = function () {
 };
 {% endhighlight %}
 
-[fireEvent的官方文档](http://msdn.microsoft.com/en-us/library/ms536423(v=vs.85).aspx)
+[fireEvent的官方文档](http://msdn.microsoft.com/en-us/library/ms536423\(v=vs.85\).aspx)
 
-[createEventObject的官方文档](http://msdn.microsoft.com/en-us/library/ie/ms536390(v=vs.85).aspx)
+[createEventObject的官方文档](http://msdn.microsoft.com/en-us/library/ie/ms536390\(v=vs.85\).aspx)
 
 再看看高级浏览器（chrome,firefox等）：
 {% highlight javascript linenos %}
