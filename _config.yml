@@ -1,5 +1,5 @@
 markdown: redcarpet
-pygments: true
+highlighter: true
 plugins: ./_plugins
 paginate: 8
 

@@ -8,9 +8,11 @@ categories: javascript
 
 微博"@"功能相信每一个玩过微博的人都用过，当你输入"@"字符串时，在光标位置旁边就会生成一个提示框，你可以快速的选取你最近"@"过的人。
 
-不过想要操作textarea可是一件麻烦事。不同浏览器下的接口不一致(其实就是IE不一致 _(:3」∠)_...)
+不过想要操作textarea可是一件麻烦事。由于获取选中区域的接口属于BOM，不同浏览器下的接口差别很大。
 
 先来看看IE下的接口 <span class="impo">document.selection</span>
+
+
 
 {% highlight javascript linenos %}
 function InsertString(ele, str){
