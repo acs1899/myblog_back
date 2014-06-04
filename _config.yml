@@ -1,14 +1,14 @@
 markdown: redcarpet
-highlighter: true
+highlighter: pygments
 plugins: ./_plugins
 paginate: 8
 
 safe: false
 
 #站点基础配置
-title: acs1899
+title: John_conna
 subTitle: "To be or not to be,that is the question..."
-description: Vincent, acs1899, GitHub, Jekyll, Works, css, html, javascript。
+description: John,conna,John conna, acs1899, GitHub, Jekyll, Works, css, html, javascript。
 feed: /atom.xml
 
 #菜单配置
