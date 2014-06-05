@@ -191,7 +191,9 @@ function getAnchor(ele){
 	var index = 0,r = null,tb = ele.nodeType == 1 ? ele : document.body;
 	if(document.all){
 		r = document.selection.createRange();
-		
+		tb.focus();
+		r.moveStart('character', -tb.value.length); 
+		index = r.text.length;	
 	}else{
 		index = tb.selectionStart
 	}
@@ -235,3 +237,7 @@ function ShowSelection(ele){
     alert('选中的文本是：'+sel);
 }
 {% endhighlight %}
+
+[selection的官方文档](http://msdn.microsoft.com/zh-cn/library/ie/ms535869\(v=vs.85\).aspx)
+
+[getSelection的官方文档](https://developer.mozilla.org/en-US/docs/Web/API/Selection)
