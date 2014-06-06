@@ -6,7 +6,7 @@ paginate: 8
 safe: false
 
 #站点基础配置
-title: John_conna
+title: John conna
 subTitle: "To be or not to be,that is the question..."
 description: John,conna,John conna, acs1899, GitHub, Jekyll, Works, css, html, javascript。
 feed: /atom.xml
