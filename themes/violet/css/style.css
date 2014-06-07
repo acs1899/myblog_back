@@ -442,6 +442,7 @@ a:hover {
     line-height: inherit;
     vertical-align: baseline;
     padding: 2px 2px;
+	white-space:pre-wrap;
 }
 .main-article pre code {
     border: none;
