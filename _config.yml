@@ -6,7 +6,7 @@ paginate: 8
 safe: false
 
 #站点基础配置
-title: John connor
+title: John connor's blog
 subTitle: "To be or not to be,that is the question..."
 description: John,connor,John connor, acs1899, GitHub, Jekyll, Works, css, html, javascript。
 feed: /atom.xml
