@@ -51,7 +51,7 @@ isArchive: true
 	{% for post in site.posts %}
 	jsons.timeline.date.push({
 	    'startDate':'{{ post.date | date_to_utc | date: "%Y-%m-%d" }}'.split('-').join(','),
-	    'headline':'{{ post.title }}',
+	    'headline':'<a href="{{ post.url }}">{{ post.title }}</a>',
 	    'text':'<p>{{ post.description }}</p>',
 	    'asset':{
 		{% if post.figure %}
