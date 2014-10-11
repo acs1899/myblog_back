@@ -55,7 +55,7 @@ pip install shadowsocks
 
 config.json是ShadowSocks Server端的配置文件
 
-{% highlight javascript linenos %}
+{% highlight html linenos %}
 vim ~/ShadowSocks/config.json
 {% endhighlight %}
 
