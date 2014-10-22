@@ -470,7 +470,7 @@ a:hover {
 .main-article blockquote p {
     color: #8d8d8d;
 }
-.main-article img {
+.main-article img{
     margin: 20px 0 24px 0;
     background: #f0f0f0;
     padding: 4px 4px;
@@ -569,3 +569,73 @@ a.toTop:hover {
 .main-article-contant .description{color:#6D6D6D;margin-top:10px;}
 .impo{color:#c7254e;padding:2px 4px;background-color:#f9f2f4;border-radius:4px;display:inline-block;line-height:1em;margin:0 2px;}
 .para{color:#017e66;padding:2px 4px;background-color:#f9f2f4;border-radius:4px;display:inline-block;line-height:1em;margin:0 2px;}
+
+#my-head-img{
+    width:185px;
+    height:185px;
+    margin:30px auto;
+    border-radius:95px;
+    margin-bottom:0;
+    position:relative;
+    background:#f0f0f0;
+    border:1px solid #a8a8a8;
+    padding:4px;
+    text-align:center;
+    -o-animation:pop .8s ease-in;
+    -ms-animation:pop .8s ease-in;
+    -moz-animation:pop .8s ease-in;
+    -webkit-animation:pop .8s ease-in;
+}
+#my-head-img img{
+    border:none;
+    padding:0;
+    margin:0;
+    display:inline-block;
+    border-radius:95px;
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin-top:-90px;
+    margin-left:-90px;
+    -o-animation:pop .8s ease-in;
+    -ms-animation:pop .8s ease-in;
+    -moz-animation:pop .8s ease-in;
+    -webkit-animation:pop .8s ease-in;
+    z-index:2;
+}
+#my-head-img:after{
+    content:'';
+    display:none;
+    position:absolute;
+    z-index:1;
+    height: 10px;
+    left: 50%;
+    top: 100%;
+    border-top: 35px solid #f0f0f0;
+    border-left: 13px solid transparent;
+    border-right: 13px solid transparent;
+    z-index:1;
+    margin-left:-13px;
+    margin-top:-10px;
+}
+
+@-webkit-keyframes pop{
+    0%{
+        -o-transform:scaleX(0) scaleY(0);
+        -ms-transform:scaleX(0) scaleY(0);
+        -moz-transform: scaleX(0) scaleY(0);
+        -webkit-transform: scaleX(0) scaleY(0);
+    }
+    90%{
+        -o-transform:scaleX(1.2) scaleY(1.2);
+        -ms-transform:scaleX(1.2) scaleY(1.2);
+        -moz-transform: scaleX(1.2) scaleY(1.2);
+        -webkit-transform: scaleX(1.2) scaleY(1.2);
+    }
+    100%{
+        -o-transform:scaleX(1) scaleY(1);
+        -ms-transform:scaleX(1) scaleY(1);
+        -moz-transform: scaleX(1) scaleY(1);
+        -webkit-transform: scaleX(1) scaleY(1);
+    }
+}
