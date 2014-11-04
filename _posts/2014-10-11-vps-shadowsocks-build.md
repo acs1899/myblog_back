@@ -88,4 +88,4 @@ nohup ssserver > log &
 
 使用之后，感觉比同等环境下的VPN快了不少。用手机到Google play上更新App尤为明显。
 
-PS:用aws的同学注意 <span class="inpo">config.json</span> 中的 <span class="inpo">server</span> 要填内网地址
+PS:用aws的同学注意 <span class="impo">config.json</span> 中的 <span class="impo">server</span> 要填内网地址
