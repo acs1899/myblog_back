@@ -86,4 +86,6 @@ nohup ssserver > log &
 
 客户端的配置几乎于配置文件的内容一样，只需要将配置文件中配置项对应填入即可。
 
-初次使用之后，感觉比同等环境下的VPN快了不少。用手机到Google play上更新App尤为明显。
+使用之后，感觉比同等环境下的VPN快了不少。用手机到Google play上更新App尤为明显。
+
+PS:用aws的同学注意 <span class="inpo">config.json</span> 中的 <span class="inpo">server</span> 要填内网地址
