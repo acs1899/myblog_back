@@ -57,7 +57,7 @@ categories: javascript
 
 ###主页面A的源码###
 
-{% highlight html linenos %}
+{% highlight html  %}
 <script type="text/javascript">
 function init(){
     document.domain = 'bai.sohu.com';
@@ -83,7 +83,7 @@ function callback(h){
 
 ###iframeB的源码###
 
-{% highlight html linenos %}
+{% highlight html  %}
 <script type="text/javascript">
 function init(){
     alert('我是第三方App，下面开始创建和主框架同域的通信通道IframeC,并设置它的src，用#号传递高度值');
@@ -102,7 +102,7 @@ function init(){
 
 ###iframeC的源码###
 
-{% highlight html linenos %}
+{% highlight html  %}
 <script type="text/javascript">
 document.domain = 'bai.sohu.com';
 alert('我（IframeC）收到iframeB通过参数（#）给我传递高度值，我现在调用主页面方法去设置IframeB的高度');

@@ -8,7 +8,7 @@ categories: javascript
 在看jQuery内核详解一书时，为了比较jQuery与原生javascript效率，举到一个例子。
 
 里面有这样一段：
-{% highlight javascript linenos %}
+{% highlight javascript  %}
 var $=document.getElementById;
 var b=$('header');
 {% endhighlight %}
@@ -27,7 +27,7 @@ var b=$('header');
 <span class="impo">'getElementById' called on an object that does not implement interface Document.</span>意为'"getElementById"被一个不能实现document接口的对象调用'（乱翻译的，不过大致意思应该是这样。。。）
 
 说明肯能是作用域的问题
-{% highlight javascript linenos %}
+{% highlight javascript  %}
 var $=document.getElementById;
 var b=$.call(document,'header');
 alert(b);

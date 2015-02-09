@@ -202,7 +202,7 @@ function getAnchor(ele){
 })();
 </script>
 
-{% highlight javascript linenos %}
+{% highlight javascript  %}
 /*向输入框当前位置插入字符*/
 function InsertString(ele, str){
     var r = null,newstart = 0,tb = ele.nodeType == 1 ? ele : docuemnt.body;

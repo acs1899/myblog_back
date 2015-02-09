@@ -5,10 +5,10 @@ description: IE6 IE7下不生效(IE6下横向纵向滚动条都在 IE7下纵向�
 keywords: IE6 IE7 overflow
 categories: html&css
 ---
-{% highlight html linenos %}
+{% highlight html  %}
 <p>There are no scrollbars on this page in sane browsers</p>
 {% endhighlight %}
-{% highlight css linenos %}
+{% highlight css  %}
 html, body, p {margin: 0; padding: 0;}
 body {overflow: hidden;}
 p {width: 5000px; height: 5000px;}

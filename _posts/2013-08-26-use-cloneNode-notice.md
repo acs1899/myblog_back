@@ -10,7 +10,7 @@ oneNode()是DOM中Node对象的方法，使用cloneNode可以方便的复制DOM�
 1、当被clone的节点包含script标签时，clone后script标签是否会再次被执行
 
 <p style="color:#ff8c00">内嵌script标签：</p>
-{% highlight html linenos %}
+{% highlight html  %}
 <div id="box">
     <script type="text/javascript" >alert(1)</script>  
 </div>  
@@ -21,7 +21,7 @@ oneNode()是DOM中Node对象的方法，使用cloneNode可以方便的复制DOM�
 在所有浏览器中<span class="impo">alert</span>都只执行一次
 
 <p style="color:#ff8c00">外链script标签：</p>
-{% highlight html linenos %}
+{% highlight html  %}
 <div id="box">
     <script type="text/javascript" src='clone.js'></script>  
 </div>  
@@ -39,7 +39,7 @@ oneNode()是DOM中Node对象的方法，使用cloneNode可以方便的复制DOM�
 2.当被clone节点被绑定了事件处理函数时，事件处理函数是否会被一同clone
 
 <p style="color:#ff8c00">HTML事件处理绑定：</p>
-{% highlight html linenos %}
+{% highlight html  %}
 <div id="box" onclick='alert(1)'>点我</div>  
 <script type="text/javascript">  
     document.body.appendChild(document.getElementById('box').cloneNode(true));  
@@ -48,7 +48,7 @@ oneNode()是DOM中Node对象的方法，使用cloneNode可以方便的复制DOM�
 在所有浏览器中，click事件均被复制
 
 <p style="color:#ff8c00">DOM0级事件处理绑定：</p>
-{% highlight html linenos %}
+{% highlight html  %}
 <div id="box">点我</div>  
 <script type="text/javascript">  
     var box=document.getElementById('box');
@@ -59,7 +59,7 @@ oneNode()是DOM中Node对象的方法，使用cloneNode可以方便的复制DOM�
 在所有浏览器中，点击第一个div会有<span class="impo">alert</span>，点击第二个div无反应
 
 <p style="color:#ff8c00">DOM2级事件处理绑定：</p>
-{% highlight html linenos %}
+{% highlight html  %}
 <div id="box">点我</div>  
 <script type="text/javascript">  
     var box=document.getElementById('box');
@@ -76,7 +76,7 @@ oneNode()是DOM中Node对象的方法，使用cloneNode可以方便的复制DOM�
 但是在IE6、7、8中 点击第二个div则会执行<span class="impo">alert</span>
 
 在《精通javascript》一书中，作者推荐一种Dean Edwards提出的跨浏览器事件绑定/删除事件解决方案
-{% highlight javascript linenos %}
+{% highlight javascript  %}
 function addEvent(element, type, handler) {  
     // 为每一个事件处理函数赋予一个独立ID
     if (!handler.$$guid) handler.$$guid = addEvent.guid++;
@@ -121,7 +121,7 @@ function handleEvent(event) {
 {% endhighlight %}
 
 <p style="color:#00bfff">为了弥补element['on'+type]无法绑定多个处理函数的缺点，addEvent将所有事件类型存储在element的events对象中，events中的每一个事件类型以同样的形式存储着该类型下所有的处理函数</p>
-{% highlight javascript linenos %}
+{% highlight javascript  %}
 element.events={
     click:{
         0:function(){...},

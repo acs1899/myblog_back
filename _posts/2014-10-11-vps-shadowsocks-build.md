@@ -14,7 +14,7 @@ ShadowSocks有很多中版本，<span class="inpo">Python</span><span class="inp
 
 ####安装Setuptools
 
-{% highlight javascript linenos %}
+{% highlight javascript  %}
 wget --no-check-certificate https://pypi.python.org/packages/2.7/s/setuptools/setuptools-0.6c11-py2.7.egg
 chmod +x setuptools-0.6c11-py2.7.egg 
 ./setuptools-0.6c11-py2.6.egg
@@ -22,7 +22,7 @@ chmod +x setuptools-0.6c11-py2.7.egg
 
 ####安装Python-pip
 
-{% highlight javascript linenos %}
+{% highlight javascript  %}
 wget --no-check-certificate https://pypi.python.org/packages/source/p/pip/pip-1.4.tar.gz
 tar -zxvf ./pip-1.4.tar.gz
 cd pip-1.4
@@ -31,7 +31,7 @@ sudo python setup.py install
 
 ####安装Python-Gevent
 
-{% highlight javascript linenos %}
+{% highlight javascript  %}
 sudo apt-get install libevent-dev
 sudo apt-get install python-dev
 pip install gevent
@@ -39,7 +39,7 @@ pip install gevent
 
 ####安装Python-M2Crypto
 
-{% highlight javascript linenos %}
+{% highlight javascript  %}
 sudo apt-get install libssl-dev
 sudo apt-get install swig
 pip install M2Crypto
@@ -47,7 +47,7 @@ pip install M2Crypto
 
 ####安装ShadowSocks-Python
 
-{% highlight javascript linenos %}
+{% highlight javascript  %}
 pip install shadowsocks
 {% endhighlight %}
 
@@ -55,13 +55,13 @@ pip install shadowsocks
 
 config.json是ShadowSocks Server端的配置文件
 
-{% highlight html linenos %}
+{% highlight html  %}
 vim ~/ShadowSocks/config.json
 {% endhighlight %}
 
 config.json配置文件格式：
 
-{% highlight javascript linenos %}
+{% highlight javascript  %}
 {
 "server":"my_server_ip",//服务器IP
 "server_port":8388,//服务器端口
@@ -76,7 +76,7 @@ config.json配置文件格式：
 
 cd到config.json所在目录
 
-{% highlight javascript linenos %}
+{% highlight javascript  %}
 nohup ssserver > log &
 {% endhighlight %}
 

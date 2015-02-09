@@ -12,7 +12,7 @@ categories: javascript
 一般我们在元素上绑定事件后，是靠用户在这些元素上的鼠标行为来捕获或者触发事件的，或者自带的浏览器行为事件，比如click，mouseover，load等等，有些时候我们需要自定义事件或者在特定的情况下需要触发这些事件。这个时候我们可以使用IE下fireEvent方法，高级浏览器（chrome,firefox等）有dispatchEvent方法。
 
 在IE下：
-{% highlight javascript linenos %}
+{% highlight javascript  %}
 //document上绑定自定义事件ondataavailable
 document.attachEvent('ondataavailable', function (event) {
     alert(event.eventType);
@@ -38,7 +38,7 @@ document.getElementById("test").onclick = function () {
 [createEventObject的官方文档](http://msdn.microsoft.com/en-us/library/ie/ms536390\(v=vs.85\).aspx)
 
 再看看高级浏览器（chrome,firefox等）：
-{% highlight javascript linenos %}
+{% highlight javascript  %}
 //document上绑定自定义事件ondataavailable
 document.addEventListener('ondataavailable', function (event) {
     alert(event.eventType);
