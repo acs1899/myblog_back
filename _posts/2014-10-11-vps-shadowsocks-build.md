@@ -10,7 +10,7 @@ ShadowSocks是一个轻量级socks5代理，以Python2.x写成。之前用的是
 
 我的手机是Nexus 4，几乎所有的Google服务都不能用(那还要亲儿子干嘛!!!)，所以自己搞个代理不能再等了。
 
-ShadowSocks有很多中版本，<span class="inpo">Python</span><span class="inpo">Nodejs</span><span class="inpo">Go</span><span class="inpo">C</span>，我用的是<span class="inpo">Python</span>版。
+ShadowSocks有很多中版本，<span class="impo">Python</span><span class="impo">Nodejs</span><span class="impo">Go</span><span class="impo">C</span>，我用的是<span class="impo">Python</span>版。
 
 ####安装Setuptools
 
