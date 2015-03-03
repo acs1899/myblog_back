@@ -58,9 +58,9 @@ jekyll server
 
 在github上创建一个项目。进入项目setting
 
-![setting](/image/s1.png)
+![setting](/images/s1.png)
 
-![setting](/image/s2.png)
+![setting](/images/s2.png)
 
 <span class="impo">Automatic page generator</span> 能帮你自动生成一些固定模板样式页面
 
