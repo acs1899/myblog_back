@@ -476,6 +476,7 @@ a:hover {
     padding: 4px 4px;
     border: 1px solid #a8a8a8;
     display: block;
+    width:100%;
     opacity: 0.8;
 }
 .main-article img:hover {
