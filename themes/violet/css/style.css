@@ -594,11 +594,6 @@ a.toTop:hover {
     margin:0;
     display:inline-block;
     border-radius:95px;
-    position:absolute;
-    left:50%;
-    top:50%;
-    margin-top:-90px;
-    margin-left:-90px;
     -o-animation:pop .8s ease-in;
     -ms-animation:pop .8s ease-in;
     -moz-animation:pop .8s ease-in;
