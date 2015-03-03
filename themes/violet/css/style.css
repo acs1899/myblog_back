@@ -90,6 +90,7 @@ a:hover {
 }
 ::selection {
     background: #ff5f3e;
+    color:#fff;
     text-shadow: none;
 }
 .fn-clear:after {
