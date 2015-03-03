@@ -89,7 +89,7 @@ a:hover {
     text-decoration: underline;
 }
 ::selection {
-    background: #F4F4F6;
+    background: #ff5f3e;
     text-shadow: none;
 }
 .fn-clear:after {
