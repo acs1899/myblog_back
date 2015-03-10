@@ -41,7 +41,7 @@ nodeJs为Javascript引入了单元测试的概念。单元测试能够帮助我�
     });
 {% endhighlight %}
 
-同步于异步测试区别就在于 <span class="impo">describe</span> 的回调函数是否有形参 <span class="impo">done</span>
+同步与异步测试区别就在于 <span class="impo">describe</span> 的回调函数是否有形参 <span class="impo">done</span>
 
 <span class="impo">Promise</span> 规范的目的是为了让程序员能以同步代码的形式来写异步代码。直观的表现就是，本来无限嵌套的回调函数变成了链式调用。
 
