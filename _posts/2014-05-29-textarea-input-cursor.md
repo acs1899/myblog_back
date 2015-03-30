@@ -236,6 +236,19 @@ function ShowSelection(ele){
     var sel = GetSelection(ele);
     alert('选中的文本是：'+sel);
 }
+/*获取光标位置*/
+function getAnchor(ele){
+	var index = 0,r = null,tb = ele.nodeType == 1 ? ele : document.body;
+	if(document.all){
+		r = document.selection.createRange();
+		tb.focus();
+		r.moveStart('character', -tb.value.length); 
+		index = r.text.length;	
+	}else{
+		index = tb.selectionStart
+	}
+	return index
+}
 {% endhighlight %}
 
 [selection的官方文档](http://msdn.microsoft.com/zh-cn/library/ie/ms535869\(v=vs.85\).aspx)
