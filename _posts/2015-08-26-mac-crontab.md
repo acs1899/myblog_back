@@ -10,8 +10,8 @@ categories: bigbang
 
 {% highlight javascript %}
     crontab -e //编辑任务
-            -l //显示已有任务
-            -r //删除所有任务
+	-l //显示已有任务
+	-r //删除所有任务
 {% endhighlight %}
 
 在mac下可能会遇见无法添加任务的情况
