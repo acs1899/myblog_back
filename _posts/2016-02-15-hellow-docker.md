@@ -45,6 +45,11 @@ Docker本身并不支持直接在Mac OS上运行，不过Docker社区提供了�
 
 注意：直接在终端是无法运行docker的，需要进入boot2docker中。
 
+{% highlight html %}
+docker-machine start default // 让boot2docker启动一个虚拟机作为docker的运行环境 - default为虚拟机名
+docker-machine ssh default // 进入boot2docker生成的虚拟机
+{% endhighlight %}
+
 Docker官方提供了一个类似github的Image管理仓库，你可以像使用github一样下载一份别人的Image。
 
 我们下载一个 **alexwhen/docker-2048** 镜像作为示例
@@ -87,13 +92,11 @@ docker run -d -p 8080:80 alexwhen/docker-2048
 docker run -ti -p 8080:80 alexwhen/docker-2048 /bin/sh
 {% endhighlight %}
 
-应用代码
+应用代码 `cd /usr/share/nginx/html`
 
 ![alexwhen/docker-2048](/images/code-2048.png)
 
-nginx配置
-
-**vi /etc/nginx/nginx.conf**
+nginx配置 `vi /etc/nginx/nginx.conf`
 
 {% highlight javascript %}
 server {
