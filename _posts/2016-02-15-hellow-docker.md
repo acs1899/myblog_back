@@ -149,4 +149,6 @@ docker run -d -v --volumes-from mydata --name mydb alexwhen/docker-2048
 
 在云计算和分布式越来越主流的今天，快速、安全、稳定的实现大规模部署成为一个共同关注的问题。各家的解决方案层出不穷，而Docker似乎在各方需求间找到了平衡点，以一种“倚天不出，谁与争锋”的王霸之气大有一统江湖之势，拭目以待吧。
 
-<img style="display:block;width:200px;margin:0 auto;" src="/images/weiguan.png" title="不明真相的围观群众" />
+<img style="display:block;width:200px;margin:0 auto;" src="/images/weiguan.png" title="赶紧买个瓜围观" />
+
+<img style="display:block;width:200px;margin:0 auto;" src="/images/weiguans.png" title="不明真相的围观群众" />
