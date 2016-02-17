@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Docker学习-入门
+title: 初试Docker
 description: 初步了解docker及使用
 keywords: mac,docker
 categories: bigbang
@@ -9,6 +9,12 @@ categories: bigbang
 <span class="impo">Docker</span>，2015最火的开源项目之一。
 
 关于Docker-“快速部署”、“隔离”、“镜像”、“容器”这些关键词想必你一定听过。Docker可以将你的基础配置和应用服务隔离开来，打包你的环境配置并实现快速部署。通过“镜像”，我们可以快速的将一个应用部署到多个服务器上，而“容器”则是用来承载这些应用的。
+
+使用Docker能给我们带来哪些好处：
+
+*	根据镜像快速部署
+*	可以通过DockerHub或搭建私有镜像库来查找、上传镜像
+*	Docker对资源占少，应用之间能做到很好的隔离同时也能保证相互间的通信
 
 本篇文章主要介绍如何使用docker，创建自己的镜像，运行容器等。具体使用准则参考官方[文档](https://docs.docker.com/)。
 
@@ -43,7 +49,7 @@ Docker官方提供了一个类似github的Image管理仓库，你可以像使用
 
 我们下载一个 <span class="impo">alexwhen/docker-2048</span> 镜像作为示例
 
-{% highlight javascript %}
+{% highlight ruby %}
 docker pull alexwhen/docker-2048
 {% endhighlight %}
 
@@ -53,7 +59,7 @@ docker pull alexwhen/docker-2048
 
 现在我们可以用 <span class="impo">alexwhen/docker-2048</span> 镜像运行一个容器。
 
-{% highlight javascript %}
+{% highlight ruby %}
 docker run -d -p 8080:80 alexwhen/docker-2048
 {% endhighlight %}
 
@@ -77,7 +83,7 @@ docker run -d -p 8080:80 alexwhen/docker-2048
 
 下面我们可以进入Container，来看看Container内部是如何运作的。
 
-{% highlight javascript %}
+{% highlight ruby %}
 docker run -ti -p 8080:80 alexwhen/docker-2048 /bin/sh
 {% endhighlight %}
 
@@ -105,3 +111,39 @@ server {
 
 当我们访问 <span class="impo">http://192.168.99.100:8080</span> 时，boot2docker会将8080端口的请求转发到Container的80端口，进而访问到应用。
 
+其实上面的例子并不够典型，因为具体的应用代码是保存在镜像中的，但是应用的代码是经常更新的，所以不适合放在镜像中。
+
+一种解决方案应该是将具体的应用代码放在宿主机，然后挂载到容器上运行。
+
+{% highlight ruby %}
+docker run -d -v /usr/data:/home/data -p 8080:80 alexwhen/docker-2048
+{% endhighlight %}
+
+这会把本地目录 <span class="impo">/usr/data</span> 挂载到容器 <span class="impo">/home/data</span> 目录。
+
+另一种方案是在容器内生成 <span class="impo">数据卷</span>，然后用它来做数据持久化。
+
+#####数据卷
+
+*	数据卷可在容器之间共享或重用
+*	数据卷中的更改可以直接生效
+*	数据卷中的更改不会包含在镜像的更新中
+*	数据卷的生命周期一直持续到没有容器使用它为止
+
+生成数据卷
+
+{% highlight ruby %}
+docker run -d -v /usr/data --name mydata -p 8080:80 alexwhen/docker-2048
+{% endhighlight %}
+
+在另外一个容器挂载刚才生成的数据卷
+
+{% highlight ruby %}
+docker run -d -v --volumes-from mydata --name mydb alexwhen/docker-2048
+{% endhighlight %}
+
+###写在最后
+
+在云计算和分布式越来越主流的今天，快速、安全、稳定的实现大规模部署成为一个共同关注的问题。各家的解决方案层出不穷，而Docker似乎在各方需求间找到了平衡点，以一种“倚天不出，谁与争锋”的王霸之气大有一统江湖之势，拭目以待吧。
+
+<img style="display:block;width:200px;margin:0 auto;" src="/images/weiguan.png" title="不明真相的围观群众" />
