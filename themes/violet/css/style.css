@@ -312,7 +312,6 @@ a:hover {
 
 .copyright {
     width: 100%;
-    height: 60px;
     background: #1c1c22;
 }
 .copyright-cnt {
@@ -320,7 +319,6 @@ a:hover {
     padding: 16px 0;
     margin: 0 auto;
     line-height: 28px;
-    height: 28px;
 }
 .copyright-cnt .follow {
     display: block;
@@ -635,4 +633,25 @@ a.toTop:hover {
         -moz-transform: scaleX(1) scaleY(1);
         -webkit-transform: scaleX(1) scaleY(1);
     }
+}
+
+
+/*移动端适应*/
+/* 屏幕小于1024px */
+@media screen and (max-width: 1024px) and (min-width: 600px) {
+    .copyright-cnt, #violet-header, .nav-list, .violet-post, .pagination-list, .comment-cnt, .violet-title .violet-title-item, .category_box ul { width: 90%;}
+    .logo, .logo a { font-size: 30px; width: auto;}
+}
+/* 屏幕小于600px */
+@media screen and (max-width: 600px) {
+    .copyright-cnt, #violet-header, .nav-list, .violet-post, .pagination-list, .comment-cnt, .violet-title .violet-title-item, .category_box ul { width: 90%;}
+    .copyright-cnt .follow {
+        display: inline-block;
+    }
+    .copyright-cnt .text {
+        float: none;
+    }
+    .logo, .logo a { font-size: 30px; width: auto;}
+    .nav-item a { padding: 0 10px; font-size: 12px;}
+    .nav-item { padding: 8px 10px 8px 0;}
 }
