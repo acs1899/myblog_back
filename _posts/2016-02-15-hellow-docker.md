@@ -3,7 +3,7 @@ layout: post
 title: 初试Docker
 description: 初步了解docker及使用
 keywords: mac,docker
-categories: bigbang
+categories: Linux/Mac
 ---
 
 **Docker**，2015最火的开源项目之一。

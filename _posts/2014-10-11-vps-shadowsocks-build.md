@@ -3,7 +3,7 @@ layout: post
 title: VPS搭建ShadowSocks
 description: VPS搭建ShadowSocks，翻墙手记
 keywords: VPS ShadowSocks
-categories: bigbang
+categories: Linux/Mac
 ---
 
 ShadowSocks是一个轻量级socks5代理，以Python2.x写成。之前用的是用pptp搭建的vpn。

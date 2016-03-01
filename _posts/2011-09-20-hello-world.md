@@ -3,7 +3,7 @@ layout: post
 title: Github搭建自己的blog
 description: 在Github上创建Gitpage与安装jekyll
 keywords: githubPage,jekyll
-categories: [javascript, html&css, jekyll]
+categories: [javascript, html&css, Linux/Mac]
 ---
 
 Github Page 本是为git项目提供一个静态说明页，后来被开发成了一个bolg系统。

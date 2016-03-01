@@ -3,7 +3,7 @@ layout: post
 title: Mac下卸载mysql
 description: mac下卸载DMG包安装的mysql
 keywords: mac,uninstall,mysql
-categories: bigbang
+categories: Linux/Mac
 ---
 
 记录删除需要的操作，供以后查阅。

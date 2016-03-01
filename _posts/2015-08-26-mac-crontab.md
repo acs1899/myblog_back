@@ -3,7 +3,7 @@ layout: post
 title: 在mac中使用cron
 description: 在mac osx 中使用 crontab 注意事项
 keywords: mac,crontab
-categories: bigbang
+categories: Linux/Mac
 ---
 
 常用的cron命令:
