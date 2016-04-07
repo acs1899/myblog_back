@@ -61,7 +61,14 @@
         </div>
         <div class="foot" id="violet-foot">
             <div class="footer fn-clear">
-                <h1 class="logo">{{ site.title }}</h1>
+                <div class="flink">
+                    <p>友情链接</p>
+                    <ul>
+                        {% for flink in site.flinks %}
+                            <li><a href="{{ flink.url }}" target="_blank">{{ flink.text }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
             </div>
             <div class="copyright">
                 <div class="copyright-cnt fn-clear">

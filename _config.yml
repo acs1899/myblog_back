@@ -32,6 +32,19 @@ headimg:
   - item: /themes/violet/images/hdbg03.jpg
   - item: /themes/violet/images/hdbg04.jpg
 
+#友链
+flinks:
+  - text: hirra
+    url: http://hirra.cn/
+  - text: fexnotes
+    url: http://blog.fexnotes.com/
+  - text: wilee
+    url: http://wilee.me/
+  - text: baidufe
+    url: http://www.baidufe.com/
+  - text: nodefe
+    url: http://nodefe.com/
+
 #关注我
 follow:
   - class: fa-google-plus
