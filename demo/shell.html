@@ -1,0 +1,17 @@
+#!/usr/bin/expect
+
+# 跳板机 一建登录
+set machine [lindex $argv 0]
+spawn ssh -i /Users/acs1899/.ssh/luowenqi.pem luowenqi@jump.tc.qudian.com
+expect "Opt or ID>:"
+if {"$machine" == ""} {
+    send "\r"
+    expect "Opt or ID>:"
+    exit
+} else {
+    send "$machine\n"
+    expect "ID>:"
+    send "1\n"
+}
+interact
+
