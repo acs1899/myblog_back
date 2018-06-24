@@ -12,11 +12,16 @@ author: 番茄拌糖
 language: zh-Hans
 date_format: '%Y-%m-%d'
 
+plugins:
+- algoliasearch-jekyll
+
+
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com' and baseurl as '/child'
 url:
 baseurl:
 permalink: pretty
+base_assets: /assets/
 
 # Pagination
 paginate: 10
@@ -388,7 +393,7 @@ baidu_analytics: eec227dc99a70c6f3621b921d56e8dce
 
 # Disqus
 disqus:
-  enable: true
+  enable: false
   shortname: blog-acs1899-com
   count: true
   # hide comments (visitors need to click to load the comments)
@@ -413,7 +418,7 @@ changyan:
 
 # Support for LiveRe comments system.
 # You can get your uid from https://livere.com/insight/myCode (General web site)
-#livere_uid: your uid
+livere_uid: MTAyMC8zNzU3OC8xNDExMA==
 
 # Support for gitalk comments system.
 gitalk:
@@ -557,7 +562,7 @@ calendar:
 
 # Algolia Search
 algolia_search:
-  enable: false
+  enable: true
   hits:
     per_page: 10
   labels:
@@ -565,6 +570,10 @@ algolia_search:
     hits_empty: "We didn't find any results for the search: ${query}"
     hits_stats: "${hits} results found in ${time} ms"
 
+algolia:
+  application_id: FKA6EK1AZ9
+  index_name: blog
+  api_key: c29a025383920aa2b4d4e27165a265f5
 
 # Local search
 local_search:
