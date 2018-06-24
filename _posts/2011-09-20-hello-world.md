@@ -1,16 +1,18 @@
 ---
-layout: post
 title: Github搭建自己的blog
 description: 在Github上创建Gitpage与安装jekyll
 keywords: githubPage,jekyll
-categories: [javascript, html&css, Linux/Mac]
+categories:
+- javascript
+- html&css
+- Linux/Mac
 ---
 
 Github Page 本是为git项目提供一个静态说明页，后来被开发成了一个bolg系统。
 
-###Step One###
+### Step One
 
-####安装Ruby ####
+#### 安装Ruby
 
 安装rvm（ruby管理工具）
 {% highlight javascript %}
@@ -35,7 +37,7 @@ rvm rubygems current
 gem install rails
 {% endhighlight %}
 
-####安装jekyll####
+#### 安装jekyll
 
 {% highlight javascript %}
 gem install jekyll
@@ -54,13 +56,13 @@ jekyll server
 
 然后你就能通过 <span class="impo">http://localhost:4000<span> 访问jekyll为你生成的blog了。
 
-###Step Two###
+### Step Two
 
 在github上创建一个项目。进入项目setting
 
-![setting](/images/s1.png)
+![setting](/assets/images/post/s1.png)
 
-![setting](/images/s2.png)
+![setting](/assets/images/post/s2.png)
 
 <span class="impo">Automatic page generator</span> 能帮你自动生成一些固定模板样式页面
 

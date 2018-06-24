@@ -3,7 +3,8 @@ layout: post
 title: js中escape,encodeURI,encodeURIComponent三个函数的区别
 description: escape,encodeURI,encodeURComponent三者不同处及使用时需要注意的地方
 keywords: escape, encodeURI, encodeURIComponent
-categories: javascript
+categories:
+- javascript
 ---
 
 js对文字进行编码涉及3个函数：escape,encodeURI,encodeURIComponent，相应3个解码函数：unescape,decodeURI,decodeURIComponent
@@ -12,14 +13,14 @@ js对文字进行编码涉及3个函数：escape,encodeURI,encodeURIComponent，
 
 例如：
 {% highlight javascript %}
-    document.write('<a href="http://www.cpuele.com?aid=7&u='+encodeURIComponent(http://www.cpuele.com/index.htm)+'">退出</a>')
+  document.write('<a href="http://www.cpuele.com?aid=7&u='+encodeURIComponent(http://www.cpuele.com/index.htm)+'">退出</a>')
 {% endhighlight %}
  
 2、 进行url跳转时可以整体使用encodeURI
 
 例如：
 {% highlight javascript %}
-    Location.href=encodeURI(http://www.cpuele.com/do/s?word=恒特电器&ct=21);
+  Location.href=encodeURI(http://www.cpuele.com/do/s?word=恒特电器&ct=21);
 {% endhighlight %}
 
 3、 js使用数据时可以使用escape

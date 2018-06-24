@@ -3,7 +3,8 @@ layout: post
 title: IE6、7下 body标签overflow:hidden失效的问题
 description: IE6 IE7下不生效(IE6下横向纵向滚动条都在 IE7下纵向滚动条还在)
 keywords: IE6 IE7 overflow
-categories: html&css
+categories:
+- html&css
 ---
 {% highlight html  %}
 <p>There are no scrollbars on this page in sane browsers</p>

@@ -3,7 +3,8 @@ layout: post
 title: textarea光标位置定位、插入、获取选择文字
 description: textarea光标位置定位、获取选择文字、向光标位置插入指定字符串
 keywords: textarea,document.selection,selectionStart,selectionEnd
-categories: javascript
+categories:
+- javascript
 ---
 
 微博"@"功能相信每一个玩过微博的人都用过，当你输入"@"字符串时，在光标位置旁边就会生成一个提示框，你可以快速的选取你最近"@"过的人。

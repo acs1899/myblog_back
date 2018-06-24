@@ -3,7 +3,8 @@ layout: post
 title: 如何为使用Promise规范的接口写测试用例
 description: 当接口使用Promise规范时，常规的异步测试写法不能正常捕获错误
 keywords: nodejs,Promise,test
-categories: javascript
+categories:
+- javascript
 ---
 
 nodeJs为Javascript引入了单元测试的概念。单元测试能够帮助我们更好的提高代码质量，让BUG在代码编写的时候即被消灭掉。

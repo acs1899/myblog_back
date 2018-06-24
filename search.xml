@@ -1,13 +1,25 @@
 ---
-layout: none
+layout: null
+sitemap: false
 ---
-<?xml version="1.0" encoding="UTF-8" ?>
-<articles xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-{% for post in site.posts %}
-<article>
-	<title>{{ post.title }}</title>
-	<url>{{ site.url }}{{ post.url }}</url>
-	<date>{{ post.date | date_to_utc | date: '%Y-%m-%d' }}</date>
-</article>
-{% endfor %}
-</articles>
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  {% for post in site.posts %}
+    <entry>
+      <title><![CDATA[{{ post.title | strip_html }}]]></title>
+      <url>{{ post.url | relative_url }}</url>
+      <content type="text"><![CDATA[{{ post.content | strip_html | strip_newlines }}]]></content>
+      <categories>
+        {% for category in post.categories %}
+          <category> {{ category | strip_html | xml_escape }} </category>
+        {% endfor %}
+      </categories>
+      <tags>
+        {% for tag in post.tags %}
+          <tag> {{ tag | strip_html | xml_escape }} </tag>
+        {% endfor %}
+      </tags>
+      <tags></tags>
+    </entry>
+  {% endfor %}
+</search>

@@ -1,4 +1,11 @@
-*.DS_Store
-_site
-.idea/
-cmd/
+_site/*
+_theme_packages/*
+
+Thumbs.db
+.DS_Store
+
+!.gitkeep
+
+.rbenv-version
+.rvmrc
+/vendor

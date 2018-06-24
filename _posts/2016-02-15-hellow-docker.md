@@ -3,7 +3,8 @@ layout: post
 title: 初试Docker
 description: 初步了解docker及使用
 keywords: mac,docker
-categories: Linux/Mac
+categories:
+- Linux/Mac
 ---
 
 **Docker**，2015最火的开源项目之一。
@@ -18,20 +19,20 @@ categories: Linux/Mac
 
 本篇文章主要介绍如何使用docker，创建自己的镜像，运行容器等。具体使用准则参考官方[文档](https://docs.docker.com/)。
 
-###你需要知道的一些基本概念
+### 你需要知道的一些基本概念
 
-#####镜像-Image
+##### 镜像-Image
 
 镜像可以理解为应用的一个快照。里面保存着该应用运行所需要的各个配置、依赖、环境参数等。镜像还有一个非常关键的概念便是可以**叠加**。镜像使用了一种叫[union file system](https://en.wikipedia.org/wiki/UnionFS)的技术，将不同镜像按照层级叠加起来（可以理解成一种依赖关系）。
 
 
-#####容器-Container
+##### 容器-Container
 
 docker的容器则可理解为一个基础版的Linux系统。容器会根据镜像中的配置、资源在镜像的上层再添加一个应用运行的读写层。
 
-![docker-filesystem](/images/docker-filesystems.png)
+![docker-filesystem](/assets/images/post/docker-filesystems.png)
 
-###安装
+### 安装
 
 以下是**mac os**系统安装流程，[Linux](https://docs.docker.com/linux/step_one/) [Windows](https://docs.docker.com/windows/step_one/)
 
@@ -41,7 +42,7 @@ Docker本身并不支持直接在Mac OS上运行，不过Docker社区提供了�
 
 具体安装流程可参考[Docker Mac OS 安装](https://docs.docker.com/mac/step_one/)
 
-###运行
+### 运行
 
 注意：直接在终端是无法运行docker的，需要进入boot2docker中。
 
@@ -58,7 +59,7 @@ Docker官方提供了一个类似github的Image管理仓库，你可以像使用
 docker pull alexwhen/docker-2048
 {% endhighlight %}
 
-![docker-images](/images/docker-images.png)
+![docker-images](/assets/images/post/docker-images.png)
 
 **docker images** 列出本地所有可用的Image，包括镜像名、TAG、创建时间和大小等信息。
 
@@ -72,19 +73,19 @@ docker run -d -p 8080:80 alexwhen/docker-2048
 
 通过 **docker ps** 检查我们容器是否运行正常。
 
-![docker-ps](/images/docker-ps.png)
+![docker-ps](/assets/images/post/docker-ps.png)
 
 如何访问我们的应用呢？注意在Mac OS下，我们的docker是运行在boot2docker里的，所以需要链接虚拟机地址才能访问docker中的应用。
 
 退出boot2docker 执行 **docker-machine ls**
 
-![docker-machine-ls](/images/docker-machine-ls.png)
+![docker-machine-ls](/assets/images/post/docker-machine-ls.png)
 
 显示boot2docker地址 **192.168.99.100** 访问 **http://192.168.99.100:8080**
 
-![docker-2048](/images/docker-2048.png)
+![docker-2048](/assets/images/post/docker-2048.png)
 
-###Container内部
+### Container内部
 
 下面我们可以进入Container，来看看Container内部是如何运作的。
 
@@ -94,7 +95,7 @@ docker run -ti -p 8080:80 alexwhen/docker-2048 /bin/sh
 
 应用代码 `cd /usr/share/nginx/html`
 
-![alexwhen/docker-2048](/images/code-2048.png)
+![alexwhen/docker-2048](/assets/images/post/code-2048.png)
 
 nginx配置 `vi /etc/nginx/nginx.conf`
 
@@ -126,7 +127,7 @@ docker run -d -v /usr/data:/home/data -p 8080:80 alexwhen/docker-2048
 
 另一种方案是在容器内生成 **数据卷**，然后用它来做数据持久化。
 
-#####数据卷
+##### 数据卷
 
 *	数据卷可在容器之间共享或重用
 *	数据卷中的更改可以直接生效
@@ -145,10 +146,10 @@ docker run -d -v /usr/data --name mydata -p 8080:80 alexwhen/docker-2048
 docker run -d -v --volumes-from mydata --name mydb alexwhen/docker-2048
 {% endhighlight %}
 
-###写在最后
+### 写在最后
 
 在云计算和分布式越来越主流的今天，快速、安全、稳定的实现大规模部署成为一个共同关注的问题。各家的解决方案层出不穷，而Docker似乎在各方需求间找到了平衡点，以一种“倚天不出，谁与争锋”的王霸之气大有一统江湖之势，拭目以待吧。
 
-<img style="display:block;width:200px;margin:0 auto;" src="/images/weiguan.png" title="赶紧买个瓜围观" />
+<img style="display:block;width:200px;margin:0 auto;" src="/assets/images/post/weiguan.png" title="赶紧买个瓜围观" />
 
-<img style="display:block;width:200px;margin:0 auto;" src="/images/weiguans.png" title="不明真相的围观群众" />
+<img style="display:block;width:200px;margin:0 auto;" src="/assets/images/post/weiguans.png" title="不明真相的围观群众" />

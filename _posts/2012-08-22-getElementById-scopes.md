@@ -3,7 +3,8 @@ layout: post
 title: getElementById方法的作用域
 description: IE6~8下document.getElementById方法内部实现与其他浏览器（包括IE9及以上）不同
 keywords: getElementById,作用域
-categories: javascript
+categories:
+- javascript
 ---
 在看jQuery内核详解一书时，为了比较jQuery与原生javascript效率，举到一个例子。
 

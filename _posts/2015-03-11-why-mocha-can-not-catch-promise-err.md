@@ -3,7 +3,8 @@ layout: post
 title: promise中的错误捕获
 description: promise捕获错误后不会直接抛出错误，而是传递给后续回调链
 keywords: nodejs,Promise,test
-categories: javascript
+categories:
+- javascript
 ---
 
 接[上篇](http://acs1899.info/javascript/2015/03/09/node-test-promise.html)文章留下的一个没有解决的问题：**在promise中的错误为什么在外层函数捕获不到？**
